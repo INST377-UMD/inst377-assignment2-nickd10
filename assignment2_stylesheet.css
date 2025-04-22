@@ -1,0 +1,20 @@
+#main-nav {
+    background-color: blue;
+    text-align: left;
+}
+
+#main-nav li {
+    display: inline-block;
+    position: relative;
+}
+
+#main-nav li:hover {
+    background-color: black;
+}
+
+#main-nav ul li {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
