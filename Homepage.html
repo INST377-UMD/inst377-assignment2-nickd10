@@ -3,8 +3,6 @@
         <title>Home Page</title>
         <link rel="stylesheet" href="assignment2_stylesheet.css">
         <script src="assignment2.js" defer></script>
-        <script src="audioCommands.js" defer></script>
-    </head>
 
     <body>
         <h1>INST377 - Activities</h1>
@@ -52,5 +50,28 @@
             <button class="button-28" role="button">Turn Off Listening</button>
             </div>
         </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        <script>
+        if (annyang) {
+            const commands = {
+                'hello': () => { alert('Hello World!'); },
+                'Change color to *tag': (term) => { alert(document.body.style.backgroundColor(term)); },
+                'go to section :section': (section) => {
+                // Code to navigate to the specified section
+                alert('Navigating to section ' + section);
+                window.location.href = section + 'html';
+                }
+            };
+        
+          // Add our commands to annyang
+          annyang.addCommands(commands);
+        
+          // Start listening.
+          annyang.start();
+        }
+        </script>
+
+
     </body>
 </html>
