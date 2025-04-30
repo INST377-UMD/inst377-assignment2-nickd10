@@ -46,8 +46,8 @@
                     </ul>
             </ul>
             <div class="buttonsContainer">
-            <button class="button-28" role="button">Turn On Listening</button>
-            <button class="button-28" role="button">Turn Off Listening</button>
+            <button class="button-28" role="button" onclick="annyang.start()">Turn On Listening</button>
+            <button class="button-28" role="button" onclick="annyang.abort()">Turn Off Listening</button>
             </div>
         </div>
 
@@ -56,19 +56,12 @@
         if (annyang) {
             const commands = {
                 'hello': () => { alert('Hello World!'); },
-                'Change color to *tag': (term) => { alert(document.body.style.backgroundColor(term)); },
-                'go to section :section': (section) => {
-                // Code to navigate to the specified section
-                alert('Navigating to section ' + section);
-                window.location.href = section + 'html';
+                'Change the color to *tag': (term) => { document.body.style.backgroundColor = term; },
+                'Navigate to :section': (section) => {
+                window.location.href = section + '.html';
                 }
             };
-        
-          // Add our commands to annyang
           annyang.addCommands(commands);
-        
-          // Start listening.
-          annyang.start();
         }
         </script>
 
