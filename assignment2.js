@@ -6,7 +6,7 @@ async function getQuote() {
 }
 
 async function getStockData() {
-    const tickerResponse = await fetch('https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2023-01-09/2023-02-10?adjusted=true&sort=asc&limit=120&apiKey=YpKlIbuK2gAapw4d8PdTceJuANip7n0Z');
+    const tickerResponse = await fetch('https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2023-01-09/2023-02-10?adjusted=true&sort=asc&limit=120&apiKey=');
     const tickerData = await tickerResponse.json();
 
     console.log('Retrieved Data: ', tickerData);
