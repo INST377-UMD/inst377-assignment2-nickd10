@@ -1,33 +1,30 @@
 <html>
-    <head>
-        <title>Dogs Page</title>
-        <link rel="stylesheet" href="assignment2_stylesheet.css">
-        <script src="assignment2.js" defer></script>
-    </head>
+<head>
+    <title>Dogs Page</title>
+    <link rel="stylesheet" href="assignment2_stylesheet.css">
+    <!-- Include Simple-Slider first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+    <!-- Your custom script comes after and uses 'defer' -->
+    <script src="assignment2.js" defer></script>
+</head>
 
-    <body>
-        <h1>INST377 Activities</h1>
-        <nav id="main-nav">
-            <ul>
-                <a href='Home.html'><li>Home</li></a>
-                <a href='Stocks.html'><li>Stocks</li></a>
-                <a href='Dogs.html'> <li>Dogs</li></a>
-            </ul>
-        </nav>
+<body class="dogs">
+    <h1>INST377 Activities</h1>
+    <nav id="main-nav">
+        <ul>
+            <a href='Home.html'><li>Home</li></a>
+            <a href='Stocks.html'><li>Stocks</li></a>
+            <a href='Dogs.html'><li>Dogs</li></a>
+        </ul>
+    </nav>
 
-        <h1>Doggos! &#128021</h1>
+    <h1>Doggos! 🐕</h1>
 
-        <div id="myslider" style="width:612px; height:612px">
-            <img src="https://picsum.photos/612/612?random=1"/>
-            <img src="https://picsum.photos/612/612?random=2"/>
-          </div>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
-          <script>
-            simpleslider.getSlider({
-              container: document.getElementById('myslider'),
-              transitionTime:1,
-              delay:3.5
-            });
-          </script>
-    </body>
+    <div class="slider-wrapper">
+        <div id="myslider" style="width:1400px; height:500px" data-simple-slider></div>
+    </div>
+
+    
+
+</body>
 </html>

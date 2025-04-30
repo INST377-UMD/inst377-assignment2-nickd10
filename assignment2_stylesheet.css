@@ -197,3 +197,9 @@
   box-shadow: none;
   transform: translateY(0);
 }
+
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
