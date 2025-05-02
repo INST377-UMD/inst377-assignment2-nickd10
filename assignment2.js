@@ -36,10 +36,35 @@ async function getDogImages() {
 async function getDogBreeds() {
     const breedResponse = await fetch('https://dogapi.dog/api/v2/breeds');
     const breedData = await breedResponse.json();
+    const breeds = breedData.data;
     console.log(breedData.data);
 
-    
+    const buttonsContainer = document.getElementById('dog-buttons');
+    const infoContainer = document.getElementById('breed-info');
+
+    breeds.forEach(breed => {
+        const name = breed.attributes.name;
+        const description = breed.attributes.description || "No description available.";
+        const lifeMin = breed.attributes.life.min || "N/A";
+        const lifeMax = breed.attributes.life.max || "N/A";
+
+        const button = document.createElement('button');
+        button.innerText = name;
+        button.className = 'button-9';
+
+        button.addEventListener('click', () => {
+            infoContainer.innerHTML = `
+                <h2>${name}</h2>
+                <p><strong>Description:</strong> ${description}</p>
+                <p><strong>Min Life:<strong> ${lifeMin}<p>
+                <p><strong>Max Life:<strong> ${lifeMax}<p>
+            `;
+        });
+
+        buttonsContainer.appendChild(button);
+    });
 }
+
 
 window.onload = async function () {
     const path = window.location.pathname;
