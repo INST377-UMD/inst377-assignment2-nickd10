@@ -5,7 +5,7 @@ async function getQuote() {
 }
 
 async function getStockData() {
-    const tickerResponse = await fetch('https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2023-01-09/2023-02-10?adjusted=true&sort=asc&limit=120&apiKey=24f7hnPtrULLMs_SVxjMgoIpRJPMg8Q2');
+    const tickerResponse = await fetch('https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2025-01-09/2025-02-10?adjusted=true&sort=asc&limit=120&apiKey=24f7hnPtrULLMs_SVxjMgoIpRJPMg8Q2');
     const tickerData = await tickerResponse.json();
     console.log('Retrieved Data: ', tickerData);
 }
@@ -44,13 +44,14 @@ async function getDogBreeds() {
 
     breeds.forEach(breed => {
         const name = breed.attributes.name;
-        const description = breed.attributes.description || "No description available.";
-        const lifeMin = breed.attributes.life.min || "N/A";
-        const lifeMax = breed.attributes.life.max || "N/A";
+        const description = breed.attributes.description;
+        const lifeMin = breed.attributes.life.min;
+        const lifeMax = breed.attributes.life.max;
 
         const button = document.createElement('button');
         button.innerText = name;
         button.className = 'button-9';
+        button.id = name;
 
         button.addEventListener('click', () => {
             infoContainer.innerHTML = `
@@ -65,6 +66,8 @@ async function getDogBreeds() {
         buttonsContainer.appendChild(button);
     });
 }
+
+
 
 
 window.onload = async function () {
