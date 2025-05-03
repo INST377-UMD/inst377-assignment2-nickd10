@@ -40,12 +40,12 @@
 .audioInstructions {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers content vertically */
-  align-items: center; /* Centers content horizontally */
-  text-align: center; /* Ensures text alignment */
-  width: 70%; /* Adjust width for readability */
-  max-width: 750px; /* Prevents it from stretching too much */
-  margin: 0 auto; /* Ensures horizontal centering */
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  width: 70%;
+  max-width: 750px;
+  margin: 0 auto;
   padding: 2px;
   background-color: forestgreen;
 }

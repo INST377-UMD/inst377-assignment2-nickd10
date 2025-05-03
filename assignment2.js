@@ -5,7 +5,9 @@ async function getQuote() {
 }
 
 async function getStockData() {
-    const tickerResponse = await fetch('https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2025-01-09/2025-02-10?adjusted=true&sort=asc&limit=120&apiKey=24f7hnPtrULLMs_SVxjMgoIpRJPMg8Q2');
+    ticker = document.getElementById('stockTicker').value;
+        
+    const tickerResponse = await fetch('https://api.polygon.io/v2/aggs/ticker/${stockTicker}/range/1/day/2025-01-09/2025-02-10?adjusted=true&sort=asc&limit=120&apiKey=24f7hnPtrULLMs_SVxjMgoIpRJPMg8Q2');
     const tickerData = await tickerResponse.json();
     console.log('Retrieved Data: ', tickerData);
 }
