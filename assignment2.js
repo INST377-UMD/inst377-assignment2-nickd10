@@ -112,8 +112,6 @@ async function stockTable() {
     });
 }
 
-// Run function when page loads
-window.addEventListener('DOMContentLoaded', stockTable);
 
 
 
