@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Stocks page</title>
+        <link rel="stylesheet" href="assignment2_stylesheet.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="assignment2.js"></script>
+        <style>
+            #stockChart {
+                width: 75%;
+                margin-left: 12.5%;
+                margin-right: 12.5%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>INST377 - Activities</h1>
+        <nav id="main-nav">
+            <ul>
+                <a href='home.html'><li>Home</li></a>
+                <a href='stocks.html'><li>Stocks</li></a>
+                <a href='dogs.html'><li>Dogs</li></a>
+            </ul>
+        </nav>
+
+        <h1>Let's chart some Stocks!</h1>
+
+        
+        <form onsubmit="populateStockChart(event)">
+            <input id="stockTicker" type="text" required maxlength="5">
+            <br>
+            <select id="timeChoices">
+                <option value='30' id="option1">30 days</option>
+                <option value='60' id="option2">60 days</option>
+                <option value='90' id="option3">90 days</option>
+            </select>
+            <br>
+            
+            <button type="submit" class="button-9">Submit</button>
+        </form>
+
+        <div id="stockChart">
+            <canvas id="myStockChart"></canvas>
+        </div>
+
+        <table id="redditStockChart">
+            <tr>
+               <th>Ticker</th>
+               <th>Comment Count</th>
+               <th>Sentiment</th>
+            </tr>
+            
+        </table>
+
+        <div class="audioInstructions">
+            <h2>In this web page there are options to Navigate using Audio!</h2>
+            <p>Ensure your Mic is enabled to be able to use this feature</p>
+            <ul>
+                <li>Navigate to a Different Page</li>
+                    <ul>
+                        <li>Say: <strong>Navigate to &lt;page&gt; </strong> </li>
+                    </ul>
+                <li>Change the Page Color</li>
+                    <ul>
+                        <li>Say: <strong>Change the color to &lt;color&gt; </strong> </li>
+                    </ul>
+                <li>Say Hello Back to you!</li>
+                    <ul>
+                        <li>Say: <strong>Hello</strong>  </li>
+                    </ul>
+                <li>Look up a Stock!</li>
+                    <ul>Say: <strong>Look up &lt;stock&gt;</strong></ul>
+            </ul>
+            <div class="buttonsContainer">
+            <button class="button-28" role="button" onclick="annyang.start()">Turn On Listening</button>
+            <button class="button-28" role="button" onclick="annyang.abort()">Turn Off Listening</button>
+            </div>
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        <script>
+        if (annyang) {
+            const commands = {
+                'hello': () => { alert('Hello World!'); },
+                'Change the color to *tag': (term) => { document.body.style.backgroundColor = term; },
+                'Navigate to :section': (section) => {
+                window.location.href = section.toLowerCase() + '.html';
+                },
+                'Look up *stock': (stock) => {
+                    document.getElementById('stockTicker').value = stock.toUpperCase();
+                    document.querySelector('form').requestSubmit();
+                }
+            };
+          annyang.addCommands(commands);
+        }
+        </script>
+    </body>
+</html>

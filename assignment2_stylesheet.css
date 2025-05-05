@@ -1,0 +1,283 @@
+#main-nav {
+    background-color: blue;
+    text-align: center;
+}
+
+#main-nav li {
+    display: inline-block;
+    position: relative;
+}
+
+#main-nav li:hover {
+    background-color: black;
+}
+
+#main-nav ul li {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px;
+  }
+
+.quoteContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  margin-top: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.audioInstructions {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 2px;
+  background-color: forestgreen;
+}
+
+#redditStockChart {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+#redditStockChart th, #redditStockChart td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+#redditStockChart th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+.button-49,
+.button-49:after {
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  align-items: center;
+}
+
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'Dive In';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+
+
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 45%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+/* CSS */
+.button-9 {
+  appearance: button;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border: none;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,
+              rgba(50, 50, 93, .1) 0 2px 5px 0,
+              rgba(0, 0, 0, .07) 0 1px 1px 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  height: 44px;
+  margin: 10px;
+  padding: 0 25px;
+  text-align: center;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.button-9:focus {
+  box-shadow: rgba(50, 50, 93, .2) 0 6px 15px 0,
+              rgba(0, 0, 0, .1) 0 2px 2px 0,
+              rgba(50, 151, 211, .3) 0 0 0 4px;
+  outline: none;
+}
+
+.button-9:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+#dog-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+#breed-info {
+  display: none;
+  max-width: 900px;
+  margin: 30px auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: left;
+}
+
+#breed-info h2 {
+  margin-top: 0;
+}
+
+#breed-info p {
+  margin: 10px 0;
+}
+
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
