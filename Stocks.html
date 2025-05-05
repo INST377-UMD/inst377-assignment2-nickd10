@@ -2,8 +2,8 @@
     <head>
         <title>Stocks page</title>
         <link rel="stylesheet" href="assignment2_stylesheet.css">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-        <script src="assignment2.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="assignment2.js"></script>
         <style>
             #stockChart {
                 width: 75%;
@@ -17,9 +17,9 @@
         <h1>INST377 - Activities</h1>
         <nav id="main-nav">
             <ul>
-                <a href='Home.html'><li>Home</li></a>
-                <a href='Stocks.html'><li>Stocks</li></a>
-                <a href='Dogs.html'><li>Dogs</li></a>
+                <a href='home.html'><li>Home</li></a>
+                <a href='stocks.html'><li>Stocks</li></a>
+                <a href='dogs.html'><li>Dogs</li></a>
             </ul>
         </nav>
 
@@ -84,7 +84,7 @@
                 'hello': () => { alert('Hello World!'); },
                 'Change the color to *tag': (term) => { document.body.style.backgroundColor = term; },
                 'Navigate to :section': (section) => {
-                window.location.href = section + '.html';
+                window.location.href = section.toLowerCase() + '.html';
                 },
                 'Look up *stock': (stock) => {
                     document.getElementById('stockTicker').value = stock.toUpperCase();

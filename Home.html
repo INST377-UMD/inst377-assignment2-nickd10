@@ -9,9 +9,9 @@
 
         <nav id="main-nav">
             <ul>
-                <a href='Home.html'><li>Home</li></a>
-                <a href='Stocks.html'><li>Stocks</li></a>
-                <a href='Dogs.html'><li>Dogs</li></a>
+                <a href='home.html'><li>Home</li></a>
+                <a href='stocks.html'><li>Stocks</li></a>
+                <a href='dogs.html'><li>Dogs</li></a>
             </ul>
         </nav>
 
@@ -52,13 +52,14 @@
         </div>
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        
         <script>
         if (annyang) {
             const commands = {
                 'hello': () => { alert('Hello World!'); },
                 'Change the color to *tag': (term) => { document.body.style.backgroundColor = term; },
                 'Navigate to :section': (section) => {
-                window.location.href = section + '.html';
+                window.location.href = section.toLowerCase() + '.html';
                 }
             };
           annyang.addCommands(commands);

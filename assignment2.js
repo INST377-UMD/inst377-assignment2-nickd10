@@ -177,15 +177,15 @@ async function getDogBreeds() {
 window.onload = async function () {
     const path = window.location.pathname;
 
-    if (path.includes("Home.html")) {
+    if (path.includes("home.html")) {
         await getQuote();
     }
 
-    if (path.includes("Stocks.html")) {
+    if (path.includes("stocks.html")) {
         stockTable();
     }
 
-    if (path.includes("Dogs.html")) {
+    if (path.includes("dogs.html")) {
         await getDogImages();
         await getDogBreeds();
     } 
