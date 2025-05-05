@@ -43,8 +43,6 @@ async function populateStockChart(event) {
             datasets: [{
                 label: `Closing Prices for ${data.ticker}`,
                 data: prices,
-                borderColor: 'blue',
-                backgroundColor: 'rgba(173, 216, 230, 0.2)',
                 fill: true,
                 tension: 0.2
             }]
